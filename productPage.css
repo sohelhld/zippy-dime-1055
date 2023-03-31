@@ -1,0 +1,163 @@
+body{
+    font-family: "Lato";
+}
+.background{
+    background: rgb(250, 247, 247);
+    background-repeat:no-repeat ;
+    background-image: linear-gradient(to bottom,#051322,#154571);
+    background-size: 100% 520px;
+    display: flex;
+    justify-content: center;
+    font-family: "Lato";
+    flex-direction: column;
+}
+.container{
+        /* width: 1200px; */
+        width: 100%;
+}
+.logo{
+    height: 36px;
+    width: 112px;
+}
+.nav{
+    display: flex;
+    width: 90%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 50px;
+    background-color: #e9f3ed;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    
+}
+
+
+
+.login img{
+    width: 100%;
+
+}
+
+.loginBtn{
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(93deg,#53b2fe,#065af3);
+    border-radius: 10px;
+}
+
+.categories {
+    width: 950px;
+    margin-top: 15px;
+    border-radius: 10px;
+    /* box-shadow: 0px 1px 15px 1px #7a7a7a; */
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: space-evenly;
+    /* z-index: 2; */
+}
+.categories span{
+    color: gray;
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    align-items:center;
+    flex-direction: column;     
+}
+
+.fa-solid{
+    font-size: 34px;
+}
+
+.fare-search{
+    margin-top:20px ;
+    font-size: 14px;
+    display: flex;
+    background-color: aliceblue;
+    width: 70%;
+    justify-content: space-around;
+    margin-left: 50px;
+    border-radius: 5px;
+    font-size: large;
+}
+.fare-select{
+    width: 80px;
+    display: flex;
+}
+
+.selected-fare-type i{
+    font-size: 14px;
+    color: rgb(106, 106, 238)
+}
+
+.proBody{
+    border: 1px solid red;
+    margin-left: 50px;
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.fillter{
+    border: 1px solid rgb(10, 230, 47);
+    width: 30%;
+    height: 900px;
+    /* background-color: #cfe8fd; */
+}
+
+.airlines{
+    border: 1px solid rgb(238, 15, 145);
+    width: 70%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 30px;
+
+}
+
+.price{
+    border: 1px solid rgb(4, 44, 105);
+    width: 70%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input{
+    height: 25px;
+    border-top: #e9f3ed;
+    border-left: #e9f3ed;
+    border-right: #e9f3ed;
+    font-size: larger;
+}
+
+.price button{
+    height: 30px;
+    font-size: larger;
+    background-color: #9fc1ff;
+    border-radius: 10px;
+}
+
+.flights{
+    border: 1px solid rgb(221, 13, 159);
+    margin-left: 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.forSingel{
+    border: 1px solid rgb(12, 8, 245);
+    display: flex ;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #e9f3ed;
+}
