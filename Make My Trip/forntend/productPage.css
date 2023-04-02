@@ -1,0 +1,218 @@
+body{
+    font-family: "Lato";
+}
+.background{
+    background: rgb(250, 247, 247);
+    background-repeat:no-repeat ;
+    background-image: linear-gradient(to bottom,#051322,#154571);
+    background-size: 100% 520px;
+    display: flex;
+    justify-content: center;
+    font-family: "Lato";
+    flex-direction: column;
+}
+.container{
+        /* width: 1200px; */
+        width: 100%;
+        background-color: #b2d3ee;
+}
+.logo{
+    height: 50px;
+    width: 112px;
+}
+.nav{
+    display: flex;
+    width: 90%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 50px;
+    background-color: #e9f3ed;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    
+}
+
+
+
+.login img{
+    width: 100%;
+
+}
+
+.loginBtn{
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(93deg,#53b2fe,#065af3);
+    border-radius: 10px;
+}
+
+.categories {
+    width: 950px;
+    margin-top: 15px;
+    border-radius: 10px;
+    /* box-shadow: 0px 1px 15px 1px #7a7a7a; */
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: space-evenly;
+    /* z-index: 2; */
+}
+.categories span{
+    color: gray;
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    align-items:center;
+    flex-direction: column;     
+}
+.categories span:hover{
+    color: #689dff;
+    font-size:18px ;
+}
+
+.fa-solid{
+    font-size: 34px;
+}
+
+.fare-search{
+    margin-top:20px ;
+    font-size: 14px;
+    display: flex;
+    background-color: aliceblue;
+    width: 70%;
+    justify-content: space-around;
+    margin-left: 50px;
+    border-radius: 5px;
+    font-size: large;
+}
+.fare-select{
+    width: 100px;
+    display: flex;
+}
+
+.selected-fare-type i{
+    font-size: 14px;
+    color: rgb(106, 106, 238)
+}
+.fare-type{
+    margin-top: 20px;
+    padding-left: 50px;
+    color: #28282c;
+    background-color: rgb(224, 230, 236);
+    width: 50%;
+    border-radius: 5px;
+    margin-left: 50px;
+    
+}
+/* .fare-search{
+    margin-top:20px ;
+    font-size: 14px;
+    display: flex;
+    background-color: rgb(0, 136, 255);
+    width: 300px;
+    justify-content: space-around;
+    margin-left: 50px;
+    border-radius: 5px;
+    font-size: large;
+    
+} */
+.fare-select{
+    width: 80px;
+    display: flex;
+}
+
+.proBody{
+    margin-left: 50px;
+    width: 90%;
+    height: auto;
+    margin-top: 30px;
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.fillter{
+    width: 30%;
+    height: 900px;
+    /* background-color: #cfe8fd; */
+}
+
+.airlines{
+    border: 1px solid rgb(4, 44, 105);
+    width: 70%;
+    height: auto;
+    background-color: rgb(212, 227, 250);
+    padding: 10px;
+    font-size: 30px;
+
+}
+
+.price{
+    border: 1px solid rgb(4, 44, 105);
+    width: 70%;
+    height: auto;
+    background-color: rgb(212, 227, 250);
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.price input{
+    background-color: rgb(212, 227, 250);
+}
+
+.input{
+    height: 25px;
+    border-top: #e9f3ed;
+    border-left: #e9f3ed;
+    border-right: #e9f3ed;
+    font-size: larger;
+}
+
+.price button{
+    height: 30px;
+    font-size: larger;
+    background-color: #fafafc;
+    border-radius: 10px;
+}
+
+.flights{
+    margin-left: 50px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.forSingel{
+    border: 3px solid rgb(160, 159, 159);
+    display: flex ;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #e9f3ed;
+}
+.forSingel span{
+    font-size: small;
+}
+
+.book{
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-image: linear-gradient(93deg,#53b2fe,#065af3);
+}
+
+.define{
+    border: 3px solid rgb(160, 159, 159);
+    display: flex;
+    width:  718px;
+    justify-content: space-around;
+    margin-top: 10px;
+    background-color: #b2d3ee;
+    margin-left: 467px;
+    margin-top: 20px;
+}

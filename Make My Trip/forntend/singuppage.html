@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+    />
+
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+    <title>Document</title>
+    <style>
+        body{
+            margin: auto;
+            
+            /* opacity: 0; */
+            background-image: linear-gradient(93deg,#53b2fe,#065af3);
+
+        }
+        .login{
+            margin: auto;
+            margin-top: 20px;
+            opacity: 1;
+            width: 900px;
+            height: 500px;
+            background-color: white;
+            text-align: center;
+            display: flex;
+        }
+        /* .sidePic{
+            width: 290px;
+            height: 40px;
+            border: none;
+        } */
+        .sPic{
+            width: 594px;
+             height: 501px;
+            /* padding-right: 100px; */
+        }
+        .inputs{
+            width: 290px;
+            height: 40px;
+            border: none;
+            
+        }
+        #inputMobileNumber{
+            display: none;
+        }
+        #signupButton{
+            color: white;
+            font-size: 20px;
+            width: 290px;
+            height: 60px;
+            border-radius: 5px;
+            border:1px solid black;
+            background-color: rgb(155, 205, 79);
+        }
+        #loginButton{
+            color: white;
+            font-size: 20px;
+            width: 290px;
+            height: 60px;
+            border-radius: 5px;
+            border:1px solid black;
+            background-color: rgb(155, 205, 79);
+            
+            
+        }
+        p{
+            font-size: 10px;
+        }
+        h3{
+            color: green;
+        }
+        .Home{
+            font-size: xx-large;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="Home" >
+        <a href="index.html">
+
+            <span><i class="fa-sharp fa-solid fa-house"></i>Home</span>
+        </a>
+    </div>
+
+    <div  id="myForm" class="login">
+       <span> <img class="sPic"  src="https://hblimg.mmtcdn.com/content/hubble/img/dest_img/mmt/activities/m_Maldives_dest_landscape_l_755_1487.jpg" alt=""></span> 
+        <form action="">
+            <br>
+            <h3>SIGN UP</h3><br><br>
+
+            <!-- Input for user name -->
+            <input class="inputs" type="text" id="inputUserName" placeholder="Enter Full Name" name="name" ><br>
+            <!-- Input for user email -->
+            <input class="inputs" type="email" id="inputEmail" placeholder="Enter E-mail Address" ><br>
+            <!-- Input of users password -->
+            <input class="inputs" type="password" name="password" id="inputPassword" placeholder="Enter your password" ><br><br><br><br>
+            <!-- Button for singn in -->
+            <button id="signupButton" onclick="onSignup()" >Sign Up</button>
+            <br><br>
+            <!-- Button for login -->
+            <button id="loginButton" onclick="onLogin()">Login</button><br><br>
+            <!-- <button onclick="window.location.href='https://w3docs.com';"></button> -->
+            <p>By continuing, I accept TCP-Travel Mate Terms and Conditions and Privacy Policy.</p>
+        
+        </form>
+    </div>
+
+</body>
+<script>
+    const baseURL = "http://127.0.0.1:3000/users/"
+    const path = `register`
+    const onSignup=()=>{
+        event.preventDefault()
+        const payload={
+            // name:document.getElementById("name").value,
+            // email:document.getElementById("email").value,
+            // password:document.getElementById("pass").value,
+            name:document.getElementById("inputUserName").value,
+            email:document.getElementById("inputEmail").value,
+            password:document.getElementById("inputPassword").value,
+        }
+        console.log("payload",payload);
+        fetch(`${baseURL}${path}`,{
+            method:"POST",
+            headers:{
+                "Content-type":"application/json"
+            },
+            body:JSON.stringify(payload)
+        }).then(res=>res.json())
+        .then(res=>console.log(res))
+        alert("User is Register")
+        .catch(err=>console.log(err))
+    }
+
+
+   const onLogin=()=>{
+    event.preventDefault()
+    window.location.href = "./loginPage.html";
+   }
+
+
+</script>
+</html>

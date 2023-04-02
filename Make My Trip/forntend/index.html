@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-+RbA8BKDcDbxNRXTzGjaa0wzd+TV8sIyFe+wjLmNhTmT0eW8YNvZlI3e1qKjwY/XGrO25vF+Al6RG+bU6fHUQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <!-- <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+      /> -->
+      <link rel="stylesheet" href="index.css">
+        <title>index page</title>
+    <!-- <style>
+        body{
+            font-family: "Lato";
+        }
+        .background{
+            background: rgb(232,232,232);
+            background-repeat:no-repeat ;
+            background-image: linear-gradient(to bottom,#051322,#154571);
+            background-size: 100% 500px;
+            display: flex;
+            justify-content: center;
+            font-family: "Lato";
+        }
+        .container{
+                width: 1200px;
+        }
+        .logo{
+            height: 36px;
+            width: 112px;
+        }
+        .data{
+           
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+        .categories {
+            width: 950px;
+            margin-top: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 1px 15px 1px #7a7a7a;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: space-evenly;
+            z-index: 2;
+        }
+        .categories span{
+            
+            font-size: 14px;
+            padding: 10px;
+            padding-top: 20px;
+            display: flex;
+            align-items:center;
+            flex-direction: column;     
+        }
+
+        .fa-solid{
+            font-size: 24px;
+        }
+
+        .tickets{
+            background-color: aliceblue;
+            width: 1200px;
+            height: 300px;
+            position: absolute;
+            top: 75px;
+            z-index: 1;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .ticket-type{
+            margin-top: 50px;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .ticket-type span {
+            padding: 5px;
+        }
+
+        .ticket-type span i{
+            font-size: 14px;
+        }
+        
+        .selected-ticket-type{
+            background-color: rgb(211,211, 211);
+            border-radius: 30px;
+        }
+
+        .flight-search{
+            border:1px solid rgb(202,202, 202);
+            display: flex;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+
+        .flight{
+            margin:  15px;
+            color:rgb(33,32, 32);
+            width: 300px;
+            border-right: 1px solid rgb(196, 194, 194);
+        }
+
+        .fare-search{
+            margin-top:50px ;
+            font-size: 14px;
+            display: flex;
+        }
+        .fare-select{
+            width: 80px;
+            display: flex;
+        }
+
+        .selected-fare-type i{
+            font-size: 14px;
+            color: rgb(106, 106, 238)
+        }
+
+        .search-button {
+            width: 216px;
+            height: 44px;
+            background-image: linear-gradient(93deg,#53b2fe,#065af3);
+            color: white;
+            font-size: 24px;
+            /* text-align: center; */
+            border-radius: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            bottom: -20;
+            left:40%;
+           
+        }
+        /* .news{
+
+        } */
+
+    </style> -->
+   
+</head>
+<body class="background">
+    <div class="container">
+        <div class="nav">
+            <a href="./index.html">
+                <img class="logo" src="./imges/logo2.png" alt="">
+            </a>
+           <div class="login">
+            <img clss ="navpic" src="./imges/nav.PNG" alt="">
+            <button class="loginBtn">Login</button>
+           </div>
+
+        </div>
+        
+
+        <div class="data">
+                    <div class="categories">
+                        <span><i class="fa-solid fa-plane-departure"></i>Flight</span>
+                        <span><i class="fa-solid fa-hotel"></i>Hotels</span>
+                        <span><i class="fa-solid fa-house"></i>Homestays</span>
+                        <span><i class="fa-solid fa-champagne-glasses"></i>Holyday</span>
+                        <span><i class="fa-solid fa-train"></i>Train</span>
+                        <span><i class="fa-solid fa-bus"></i>Bus</span>
+                        <span><i class="fa-solid fa-taxi"></i>Cab</span>
+                        <span><i class="fa-solid fa-money-bill-wave"></i>Forex</span>
+                    </div>
+                    <div class="tickets">
+                        <div class="ticket-type">
+                            <span class="selected-ticket-type"><i class="fa-solid fa-circle-check"></i>ONEWAY</span>
+                            <span><input type="radio"/> TRIP</span>
+                            <span><input type="radio"/>MULTI CITY</span>
+                        </div>
+                        <div class="flight-search">
+                            <div class="flight">
+                                <span><h1>FROM</h1></span>
+                                <!-- <h1>Delhi</h1> -->
+                                <!-- <select name="TO" id=""></select> -->
+                                <input type="text"  placeholder="form" class="userDetails" id="form">
+                                
+                            </div>
+                            <div class="flight">
+                                <span><h1>To</h1></span>
+                                <input type="text" placeholder="TO" class="userDetails" id="to">
+                               
+                            </div>
+                            <!-- dep -->
+                            <div class="flight">
+                                <span><h1>Departure</h1></span>
+                                <input type="text" placeholder="Departure" class="userDetails" id="dep">
+                                
+                            </div>
+                            <div class="flight">
+                                <span><h1>Return</h1></span>
+                                <input type="text" placeholder="Return" class="userDetails" id="return">
+                              
+                            </div>
+                            <div class="flight">
+                                <span><h1>Travellers & Class</h1></span>
+                                <input type="text" placeholder="Travellers" class="userDetails" id="person">
+                                <input type="text" placeholder="class" class="userDetails" id="Class">
+                                
+                
+                            </div>
+                        </div>
+                        <div class="fare-search">
+                            <span class="fare-select">Select A fare Type</span>
+                            <div class="fare-type">
+                                <span class="selected-fare-type"><i class="fa-solid fa-circle-check"></i>Regular Fares</span>
+                                <span><input type="radio"/> Armed Forces Fares</span>
+                                <span><input type="radio"/>student Fares </span>
+                                <span><input type="radio"/>Senior Citizen Fares </span>
+                                <span><input type="radio"/>Double Seat Fares </span>
+                            </div>
+                        </div>
+                        <button class="search-button" >SEARCH</button>
+                    </div>
+        </div>
+
+        <!-- offers -->
+        <div class="offers">
+            <div class="allOffers">
+                <h1>Offers</h1>
+                <h3>All Offers</h3>
+                <h3>Bank Offers</h3>
+                <h3>Flight </h3>
+                <h3>Hotels </h3>
+                <h3>Holidays </h3>
+            </div>
+
+            <div class="offerBody">
+                <div class="offerBox">
+                    <img src="https://promos.makemytrip.com/notification/xhdpi//116X116-DH-CounterSale-22032023.jpg?im=Resize=(134,134)" alt="">
+                    <div>
+                        <h2>FLASH SALE FROM 6 TO 8 PM ONLY!</h2>
+                        <h5>Grabe Flat 15% OFF on hotels & Homestays</h5>
+                        <h4>View Offer</h4>
+                    </div>
+                </div>
+
+                <div class="offerBox">
+                    <img src="https://promos.makemytrip.com/notification/xhdpi//train04-116x116-06012021.jpg?im=Resize=(134,134)" alt="">
+                    <div>
+                        <h2>Trip Guarantee on Trains!</h2>
+                        <h5>Grabe tickets no more. GEt a confrimed Ticket or a fre upgrade to flights</h5>
+                        <h4>View Offer</h4>
+                    </div>
+                </div>
+
+                <div class="offerBox">
+                    <img src="https://promos.makemytrip.com/notification/xhdpi//thai-smile-116x116-23032023.jpg?im=Resize=(134,134)" alt="">
+                    <div>
+                        <h2>DealsOnWheels:Get Up to Rs.40 Off* </h2>
+                        <h5>bookings and get ser fir a fun - filles journey</h5>
+                        <h4>View Offer</h4>
+                    </div>
+                </div>
+
+                <div class="offerBox">
+                    <img src="https://promos.makemytrip.com/notification/xhdpi//sbi-116x116-19082020.jpg?im=Resize=(134,134)" alt="">
+                    <div>
+                        <h2>FLASH SALE FROM 6 TO 8 PM ONLY!</h2>
+                        <h5>Grabe Flat 15% OFF on hotels & Homestays</h5>
+                        <h4>View Offer</h4>
+                    </div>
+                </div>
+
+                <div class="offerBox">
+                    <img src="https://promos.makemytrip.com/notification/xhdpi//singapore-airlines-116x116-24022023.jpg?im=Resize=(134,134)" alt="">
+                    <div>
+                        <h2>DealsOnWheels:on Train</h2>
+                        <h5>Grabe Flat 10% OFF on next road trip</h5>
+                        <h4>View Offer</h4>
+                    </div>
+                </div>
+
+                <div class="offerBox">
+                    <img src="https://promos.makemytrip.com/notification/xhdpi//116X116-DH-CounterSale-22032023.jpg?im=Resize=(134,134)" alt="">
+                    <div>
+                        <h2>FLASH SALE FROM 6 TO 8 PM ONLY!</h2>
+                        <h5>Grabe Flat 15% OFF on hotels & Homestays</h5>
+                        <h4>View Offer</h4>
+                    </div>
+                </div>
+
+        
+            </div>
+
+        </div>
+
+        <!-- plaing -->
+        <div class="plain">
+            <div class="plainBox">
+                <img src="https://promos.makemytrip.com/notification/xhdpi/Vande-Flight-10072020.png" alt="">
+                <div>
+                    <h3>Planning to book an international flight?</h3>
+                    <h4>Check Travel Guidenlines</h4>
+                </div>
+            </div>
+            <div class="plainBox">
+                <img src="https://promos.makemytrip.com/Growth/Images/B2C/2x/language1@2x_20210901.png" alt="">
+                <div>
+                    <h3>We are available in hindi</h3>
+                    <h4>In Hindi</h4>
+                </div>
+            </div>
+            <div class="plainBox">
+                <img src="https://promos.makemytrip.com/notification/xhdpi/web-check-in-116x116-23062020.png" alt="">
+                <div>
+                    <h3>computarise Cheack in</h3>
+                    <h4>know more</h4>
+                </div>
+            </div>
+        </div>
+
+        <!-- QR -->
+        <div class="pic">
+            <img src="./imges/Capture.PNG" alt="">
+        </div>
+
+        <!-- HAndpicked Collection for You -->
+        <div class="handpicked">
+                <h1>Handpicked Collections for You</h1>
+                <div class="reel">
+                    <div class="reelBox">
+                        <img src="https://hblimg.mmtcdn.com/content/hubble/img/delhi_hotels_tiow/mmt/activities/m_Le%20ROI%20Floating%20Huts_Eco%20Rooms_Tehri_Uttarakhand_l_550_821.jpg?im=Resize=(400,462)" alt="">
+                        <h3>TOP 8</h3>
+                        <h4>stays in  Around Delhi </h4>
+                    </div>
+                    <div class="reelBox">
+                        <img src="https://hblimg.mmtcdn.com/content/hubble/img/seo_img/mmt/activities/m_Radisson_blu_image_seo_l_550_821.jpg?im=Resize=(400,462)" alt="">
+                        <h3>TOP 10</h3>
+                        <h4>stays in  Around mumbai </h4>
+                    </div>
+                    <div class="reelBox">
+                        <img src="https://hblimg.mmtcdn.com/content/hubble/img/collections/m_hill_stations11_p_540_417.jpg?im=Resize=(400,462)" alt="">
+                        <h3>TOP 8</h3>
+                        <h4>stays in  Around kolkata </h4>
+                    </div>
+                    <div class="reelBox">
+                        <img src="https://hblimg.mmtcdn.com/content/hubble/img/collections/m_beach44_p_540_417.jpg?im=Resize=(400,462)" alt="">
+                        <h3>TOP 11</h3>
+                        <h4>stays in  Around bengalore </h4>
+                    </div>
+                    <div class="reelBox">
+                        <img src="https://hblimg.mmtcdn.com/content/hubble/img/Australia/mmt/destination/m_Australia_destination_6_l_361_641.jpg?im=Resize=(400,462)" alt="">
+                        <h3>TOP 8</h3>
+                        <h4>stays in  Around pune </h4>
+                    </div>
+                    <div class="reelBox">
+                        <img src="https://hblimg.mmtcdn.com//content/hubble/img/amritsar/mmt/destination/m_Amritsar_activity_heritage_l_684_1026.jpg?im=Resize=(400,462)" alt="">
+                        <h3>TOP 13</h3>
+                        <h4>stays in  Around bali </h4>
+                    </div>
+                    <div class="reelBox">
+                        <img src="https://hblimg.mmtcdn.com/content/hubble/img/Delhi%20Hotel%20Collections/mmt/activities/m_Itsy%20Bitsy%20Cabin%20Dome-shaped%20Cabin%20Kasol_p_1920_1080.jpg" alt="">
+                        <h3>TOP 8</h3>
+                        <h4>stays in  Around hyrabad </h4>
+                    </div>
+
+                </div>
+        </div>
+
+        <!-- Unlock Lesser -->
+        <div class="Unlock-Lesser">
+            <h1>Unlock Lesser- Known Wonders of India</h1>
+            <div class="unlock-body">
+                <div class="unlockBox">
+                    <img src="https://hblimg.mmtcdn.com//content/hubble/img/narkanda/mmt/destination/m_Narkanda_l_372_902.jpg?im=Resize=(400,462)" alt="">
+                    <h3>Shimla's Secret</h3>
+                </div>
+                <div class="unlockBox">
+                    <img src="https://hblimg.mmtcdn.com//content/hubble/img/yercaud/mmt/destination/m_destination-yercaud-landscape_l_400_640.jpg?im=Resize=(400,462)" alt="">
+                    <h3>Tamil Hill Town</h3>
+                </div>
+                <div class="unlockBox">
+                    <img src="https://hblimg.mmtcdn.com//content/hubble/img/dooars/mmt/destination/m_Dooars_l_457_685.jpg?im=Resize=(400,462)" alt="">
+                    <h3>himachal's Secret</h3>
+                </div>
+                <div class="unlockBox">
+                    <img src="https://hblimg.mmtcdn.com//content/hubble/img/dhanaulti/mmt/destination/m_Destination_Dhanaulti_l_534_801.jpg?im=Resize=(400,462)" alt="">
+                    <h3>gujrat's Secret</h3>
+                </div>
+                <div class="unlockBox">
+                    <img src="https://hblimg.mmtcdn.com//content/hubble/img/dhanaulti/mmt/destination/m_Destination_Dhanaulti_l_534_801.jpg?im=Resize=(400,462)" alt="">
+                    <h3>Shimla's Secret</h3>
+                </div>
+                <div class="unlockBox">
+                    <img src="https://hblimg.mmtcdn.com//content/hubble/img/mandarmani/mmt/destination/m_destination-mandarmoni-landscape_l_400_640.jpg?im=Resize=(400,462)" alt="">
+                    <h3>Shimla's Secret</h3>
+                </div>
+                <div class="unlockBox">
+                    <img src="https://hblimg.mmtcdn.com//content/hubble/img/sasan/mmt/destination/m_destination_sasan_gir_l_400_640.jpg?im=Resize=(400,462)" alt="">
+                    <h3>Shimla's Secret</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="trip">
+            <img src="./imges/tempsnip.png" alt="">
+        </div>
+
+         <!-- Footer Section  -->
+    <div class="top">
+        <div>
+            <div class="left">
+                <h4>Amazing offers available on Travel Mate</h4>
+                <p>Travel Mate helps you discover the best things to do, eat and buy - wherever you are! Make every day awesome with travel mate. Dine at the finest restaurants, relax at the best spas, pamper yourself with exciting wellness and shopping offers or just explore your city intimately… you will always find a lot more to do with nearbuy. From tattoo parlors to music concerts, movie tickets to theme parks, everything you want is now within reach. Don't stop yet! Take it wherever you go with the nearbuy mobile app. Based on your location and preference, our smart search engine will suggest new things to explore every time you open the app. What's more, with offers on everything around you... you are sure to try something new every time.</p>
+            </div>
+            <div class="right">
+                <h3>Follow Us</h3>
+                <div id="social">
+                    <a href="https://www.facebook.com/nearbuy">
+                        <img src="https://res4.nbstatic.in/static/images/social-icons/facebook.svg" alt="">
+                    </a>
+                    <a href="https://twitter.com/nearbuy">
+                        <img src="https://res4.nbstatic.in/static/images/social-icons/twitter.svg" alt="">
+                    </a>
+                    <a href="https://instagram.com/nearbuy">
+                        <img src="https://res4.nbstatic.in/static/images/social-icons/instagram.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div>
+            <div class="left">
+                <table>
+                    <thead>
+                        <th>Company</th>
+                        <th>Help</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="">About Us</a></td>
+                            <td><a href="">Contact Us</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Blog</a></td>
+                            <td><a href="">Sitemap</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Policy</a></td>
+                            <td>
+                            <td><a href=""></a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="">Universal Fine Print</a></td>
+                            <td>
+                            <td><a href=""></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Copyright © travel mate.com India Private Limited. All rights reserved.</p>
+                <p>v 3.0.0</p>
+            </div>
+            <div class="right">
+                <div>
+                    <h3>Download App</h3>
+                <div id="app-links">
+                    <a href="">
+                        <img src="https://res4.nbstatic.in/static/images/google-play-badges.svg" alt="">
+                        <p>Google Play</p>
+                    </a>
+                    <a href="">
+                        <img src="https://res4.nbstatic.in/static/images/app-store.svg" alt="">
+                        <p>App Store</p>
+                    </a>
+                </div>
+                <p>Customer Care: +91-7303390416 - 11 AM to 8 PM (MON - SUN)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     </div>
+    <!-- </div> -->
+
+</body>
+<script src="./index.js"></script>
+</html>

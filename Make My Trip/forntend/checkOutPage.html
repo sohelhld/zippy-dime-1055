@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-+RbA8BKDcDbxNRXTzGjaa0wzd+TV8sIyFe+wjLmNhTmT0eW8YNvZlI3e1qKjwY/XGrO25vF+Al6RG+bU6fHUQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="checkOutPage.css" />
+    <title>CheackOut page</title>
+  </head>
+
+  <body class="background">
+    <div class="container">
+      <div class="nav">
+        <a href="./index.html">
+            <img class="logo" src="./imges/logo2.png" alt="">
+        </a>
+
+        <div class="categories">
+          <span><i class="fa-solid fa-plane-departure"></i>Flight</span>
+          <span><i class="fa-solid fa-hotel"></i>Hotels</span>
+          <span><i class="fa-solid fa-house"></i>Homestays</span>
+          <span><i class="fa-solid fa-champagne-glasses"></i>Holyday</span>
+          <span><i class="fa-solid fa-train"></i>Train</span>
+          <span><i class="fa-solid fa-bus"></i>Bus</span>
+          <span><i class="fa-solid fa-taxi"></i>Cab</span>
+          <span><i class="fa-solid fa-money-bill-wave"></i>Forex</span>
+        </div>
+        <div class="login">
+          <button class="loginBtn">Login</button>
+        </div>
+      </div>
+    </div>
+    <div class="fare-search">
+      <span class="fare-select">Select A fare Type</span>
+      <div class="fare-type">
+        <span class="selected-fare-type"
+          ><i class="fa-solid fa-circle-check"></i>Regular Fares</span
+        >
+        <span><input type="radio" /> Armed Forces Fares</span>
+        <span><input type="radio" />student Fares </span>
+        <span><input type="radio" />Senior Citizen Fares </span>
+        <span><input type="radio" />Double Seat Fares </span>
+      </div>
+    </div>
+    <div class="define">
+        <h4> Airlines</h4>
+        <h4> Departure</h4>
+        <h4> Class</h4>
+        <h4> Arrival</h4>
+        <h4> Price</h4>
+
+        
+      </div>
+
+    <div class="proBody">
+      <div id="cheackoutProduct"></div>
+      <div id="totalPrice">
+        <!-- <h2>TotalPrice</h2>
+        <div>
+          <div>
+            <h3>price</h3>
+            <h3>15315</h3>
+          </div>
+          <div>
+            <h3>tax</h3>
+            <h3>35135</h3>
+          </div>
+          <div>
+            <h2>totalPrice</h2>
+            <h2>h3242</h2>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="details">
+      <h3>Booking Details</h3>
+      <div>
+            <h4>Name:-</h4>
+          <input
+            class="inputs"
+            type="text"
+            id="inputUserNumber"
+            placeholder="Enter Full Name"
+          /><br />
+          <!-- Input for user email -->
+          <h4>Email:-</h4>
+          <input
+            class="inputs"
+            type="email"
+            id="inputEmail"
+            placeholder="Enter E-mail Address"
+            required
+          /><br />
+          <h4>Ph. No.:-</h4>
+          <input
+          class="inputs"
+          type="number"
+          id="inputNumber"
+          placeholder="Enter Mobil Number"
+          required
+        />
+      </div>
+      <!-- Input of users password -->
+    </div>
+    <button onclick="onCheck()" class="toPay">Continue</button>
+  </body>
+  <script>
+
+
+   
+    const cheackoutProduct = document.getElementById("cheackoutProduct");
+    const priceProduct = document.getElementById("totalPrice");
+
+    const data = JSON.parse(localStorage.getItem("checkOutItem"));
+    console.log(data);
+
+    function flightCardGenerator({
+      company,
+      departure_time,
+      from,
+      To,
+      AirClass,
+      Arival_time,
+      price,
+    }) {
+      const flightCard = `
+    <div class="forSingel">
+                <span><i class="fa-sharp fa-solid fa-plane"></i><h3>${company}</h3></span>
+                <div>
+                    <h3>${departure_time}</h3>
+                    <h6>${from}</h6>
+                </div>
+                    <h6>${AirClass}</h6>
+                    <div>
+                    <h3>${Arival_time}</h3>
+                    <h6>${To}</h6>
+                    </div>
+                     <h2>₹${price}</h2>
+                   
+            </div>
+        `;
+      return flightCard;
+    }
+    cheackoutProduct.innerHTML = flightCardGenerator(data);
+
+    function priceCardGenerator({
+      company,
+      departure_time,
+      from,
+      To,
+      AirClass,
+      Arival_time,
+      price,
+    }) {
+      const priceCard = `
+        <h2>TotalPrice</h2> 
+         <div>
+         <div>
+            <h3>price</h3>
+            <h3>${price}</h3>        
+        </div>
+        <div>
+            <h3>tax(8%)</h3>
+            <h3>${(price * 7) / 100}</h3>            
+        </div>
+        <div>
+            <h2>totalPrice</h2>
+            <h2>${price + (price * 7) / 100}</h2>
+        </div>
+        `;
+
+      return priceCard;
+    }
+
+    priceProduct.innerHTML = priceCardGenerator(data);
+
+
+    const Check = document.getElementById("Check");
+    const onCheck=()=>{
+    event.preventDefault()
+    window.location.href = "./paymentPage.html";
+   }
+   
+   let loginBtn =  document.querySelector(".loginBtn")
+    loginBtn.addEventListener("click",()=>{
+  window.location.href = "./singuppage.html";
+})
+
+  </script>
+</html>

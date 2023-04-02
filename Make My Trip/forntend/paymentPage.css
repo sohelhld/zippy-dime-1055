@@ -1,0 +1,162 @@
+body{
+    font-family: "Lato";
+}
+.background{
+    background: rgb(250, 247, 247);
+    background-repeat:no-repeat ;
+    background-image: linear-gradient(to bottom,#051322,#154571);
+    background-size: 100% 720px;
+    display: flex;
+    justify-content: center;
+    font-family: "Lato";
+    flex-direction: column;
+}
+.container{
+        /* width: 1200px; */
+        width: 100%;
+}
+.logo{
+    height: 36px;
+    width: 112px;
+}
+.nav{
+    display: flex;
+    width: 90%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    gap: 50px;
+    background-color: #e9f3ed;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    
+}
+
+.login img{
+    width: 100%;
+}
+
+.loginBtn{
+    width: 150px;
+    height: 40px;
+    background-image: linear-gradient(93deg,#53b2fe,#065af3);
+    border-radius: 10px;
+}
+
+.categories {
+    width: 950px;
+    margin-top: 15px;
+    border-radius: 10px;
+    /* box-shadow: 0px 1px 15px 1px #7a7a7a; */
+    /* background-color: aliceblue; */
+    display: flex;
+    justify-content: space-evenly;
+    /* z-index: 2; */
+}
+.categories span{
+    color: gray;
+    font-size: 14px;
+    padding: 10px;
+    padding-top: 20px;
+    display: flex;
+    align-items:center;
+    flex-direction: column;     
+}
+.categories span:hover{
+    color: #689dff;
+    font-size:18px ;
+}
+
+.fa-solid{
+    font-size: 34px;
+}
+
+.fare-search{
+    margin-top:20px ;
+    font-size: 14px;
+    display: flex;
+    background-color: aliceblue;
+    width: 70%;
+    justify-content: space-around;
+    margin-left: 50px;
+    border-radius: 5px;
+    font-size: large;
+}
+.fare-select{
+    width: 80px;
+    display: flex;
+}
+
+
+#totalPrice{
+    width: 20%;
+    height: 250px;;
+    display:flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    /* align-items: center; */
+    /* justify-content: space-between; */
+
+}
+#totalPrice div div{
+    display:flex;
+    justify-content: space-around;
+    height: auto;
+    /* width: 20%; */
+    border: 1px solid rgb(51, 50, 50);
+}
+#totalPrice div h2{
+    color: #065af3;
+}
+      .payment {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+      }
+      .oftion {
+        border: 1px solid red;
+        width: 20%;
+      }
+      .payDeatils {
+        border: 1px solid rgb(17, 75, 236);
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin: auto;
+        gap: 5px;
+        padding: 10px;
+        background-color: aliceblue;
+      }
+      #date {
+        width: 100px;
+        height: 30px;
+      }
+      #cvv {
+        width: 100px;
+        height: 30px;
+      }
+
+      #PayNow {
+        width: 160px;
+        height: 50px;
+        border-radius: 10px;
+        margin: auto;
+        background-image: linear-gradient(93deg,#53b2fe,#065af3);
+      }
+      .inputs {
+        width: 100%;
+        height: 30px;
+      }
+      .price {
+        border: 1px solid rgb(11, 243, 11);
+        width: 30%;
+      }
+      .exp {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
